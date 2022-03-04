@@ -1,5 +1,8 @@
 std::enable_shared_from_this 有什么意义?
 
+注意enable_shared_from_this需要public继承
+https://stackoverflow.com/questions/56415222/why-weak-from-this-always-returns-empty-weak-pointer
+
 来自知乎的答案:
 
 简单地说就是帮助你怎么在class内部拿到this的shared_ptr版本。
