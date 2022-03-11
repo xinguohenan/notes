@@ -1,6 +1,6 @@
 最近遇到一个问题，C++写的library，在armv7a的版本上会crash。提示错误`SIGSEGV /SEGV_MAPERR`
 
-排查了一下原因，发现是把指针从C++通过jni传给Java时，没有添加jlong的转换  
+排查了一下原因，发现是把指针从C++通过jni传给Java时，没有添加jlong的转换。  
 Crash代码：
 ```
 std::shared_ptr<CppObj> cppObj = CreateCppObj();
