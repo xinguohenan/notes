@@ -14,5 +14,6 @@ env->CallVoidMethod(javaObj, javaMethod, (jlong)cppObj.get());
 ```
 
 这事儿也有点诡异。
+
 不加jlong的转换，在Java层拿到的指针值(long类型)是一个很大的负数-7784369836185216460。
 加上jlong的转换，在Java层拿到的指针值(long类型)就是一个正数2454086992。
