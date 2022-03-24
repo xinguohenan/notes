@@ -1,4 +1,4 @@
-SharedFlow里有一个Array, 每个collect()调用都会网Array里添加一个element:
+SharedFlow里有一个Array, 每个collect()调用都会往Array里添加一个element:
 ```
 internal abstract class AbstractSharedFlow<S : AbstractSharedFlowSlot<*>> : SynchronizedObject() {
     @Suppress("UNCHECKED_CAST")
