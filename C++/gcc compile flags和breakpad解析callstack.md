@@ -1,7 +1,7 @@
 最近遇到一些问题，我们在Android上遇到native crash后，用release so生成symbol时，minidump生成的call stack是错的。
 
 猜测原因可能是，我们用的so是用g0进行build的，就是不带任何符号信息。
-这样的好处是so size会更小，但是因为不带任何符号信息，所以breakpad在分析call stack时，只能根据function的地址范围进行搜索，可能会生成错的call stack。
+这样的好处是so size会更小，但是因为不带任何符号信息，所以breakpad在分析call stack时，只能根据有符号信息的function的地址范围进行搜索，可能会生成错的call stack。因为很多内部函数的符号信息全被删除了，callstack中内部函数的调用可能就会被解析为成某个有符号的函数的调用(根据函数地址搜索的)。
 
 解决办法就是，要么release so别用g0，用默认值(g2)。
 或者就是生成release so对应的带符号的so，再进行分析。
