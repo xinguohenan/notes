@@ -26,6 +26,7 @@ https://gcc.gnu.org/onlinedocs/gcc/Debugging-Options.html
 对于release so， breakpad在分析时可能产生错误的call stack。StackOverflow上有一个类似的解释:
 
 https://stackoverflow.com/questions/46804270/objdump-disassemble-doesnt-match-source-code
+
 GOMP_ordered_end@@GOMP_1.0+0x70，这个只是说调用了一个内部方法(内部方法因为并不需要export, 符号信息被删除的一干二净)，这个内部方法在GOMP_ordered_end方法后偏移112个字节而已。并不是说调用了GOMP_ordered_end()方法。
 ```
 Don't get distracted by GOMP_ordered_end@@GOMP_1.0+0x70 mark in assembly code. All it says is that this calls some local library function (for which objdump didn't find any symbol info) which happens to be located 112 bytes after GOMP_ordered_end. This is most likely gomp_resolve_num_threads
