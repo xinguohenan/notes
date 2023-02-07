@@ -1,5 +1,8 @@
 Try
-```adb bugreport ./bugreport.zip```
+```
+adb bugreport ./bugreport.zip
+```
+
 and you will get then in zip file
 
 ```
