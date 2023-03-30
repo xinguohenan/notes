@@ -1,4 +1,4 @@
-https://stackoverflow.com/a/56503144
+Stackoverflow上的[回答](https://stackoverflow.com/a/56503144)
 
 这个解释非常通俗易懂。LL不能同时处理多个规则，当规则比较复杂时可能需要采用LL(*)规则，*很大，效率会比较低。
 另外LL不能处理左递归规则。
