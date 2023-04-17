@@ -1,4 +1,4 @@
-Try to run the following command:
+Try to run the following command in your project's root folder:
 ```
 rm -r .idea
 ```
