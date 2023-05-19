@@ -4,3 +4,4 @@
 [train.py](https://github.com/xinguohenan/nlp_demo/blob/main/ch08/train.py)
 1. loss函数是直接计算的严格相等。对日期这是有效的，但是对于summary，我们应该用RoughScore去计算loss。
 [xsum.py](https://github.com/xinguohenan/nlp_demo/blob/main/dataset/xsum.py)
+[loss值计算Seq2Seq.forward](https://github.com/xinguohenan/nlp_demo/blob/main/ch07/seq2seq.py)
